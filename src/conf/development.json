@@ -1,0 +1,82 @@
+{
+  "imageSizeLimit": 10485760,
+  "phoneVerificationTimeExpire": 7200,
+  "authenTokenExpirationTime": 10800,
+  "customTokenConfig": {
+    "tokenExpiration": 86400,
+    "tokenSecret": "SSGYHhc7qzHk4VU355Gs24Fz"
+  },
+  "supportPassword": "V4c4Sunny!",
+  "imageUrl": "https://s3-ap-southeast-1.amazonaws.com/dev.images.your.rentals/",
+  "profileImage": {
+    "formats": [
+      "jpg",
+      "jpeg",
+      "png"
+    ],
+    "minSize": {
+      "width": 300,
+      "height": 300
+    },
+    "sizes": [
+      {
+        "width": 300,
+        "height": 300,
+        "postfix": "medium",
+        "save": true
+      },
+      {
+        "width": 40,
+        "height": 40,
+        "postfix": "small",
+        "save": true
+      }
+    ]
+  },
+  "hapi": {
+    "conf": {
+      "debug": {
+        "request": [
+          "error",
+          "uncaught"
+        ]
+      }
+    },
+    "auth":{
+      "tokenSecret":"SSGYHhc9qzHk3VU344Gs24Fz"
+    }
+  },
+  "apiSettings": {
+    "apiUrlPrefix": "/api/",
+    "accessApiRoles": {
+      "superUser": "SuperUser"
+    },
+    "authorizationMethods": {
+      "response": 1,
+      "request": 2
+    }
+  },
+  "changeEmailTimeout": 24,
+  "loggerSettings": {
+    "serviceName": "User Service",
+    "emailSettings": {
+      "fromEmail": "alert@your.rentals",
+      "toEmails": [
+        {
+          "email": "alerts@your.rentals",
+          "name": "dev group",
+          "type": "to"
+        }
+      ]
+    },
+    "smsSettings": {
+      "smsHookUrl": "/notification/sms/process",
+      "toPhones": ["+841633183510"]
+    }
+  },
+
+  "db": {
+    "connectionString": "mongodb://172.17.0.2:27017/gileDb"
+  },
+  "adminToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJTdXBlclVzZXIiLCJyb2xlIjoiU3VwZXJVc2VyIn0.y__7NgfSlIXjEZu7luyncXEKQc5xk9y-mf16nMQkJUY"
+}

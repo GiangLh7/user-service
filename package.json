@@ -1,0 +1,24 @@
+{
+  "name": "user-microservice",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "pm2 --no-deamon start src/server.js -o $APP_LOG"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "gile-utils": "git+https://gianglh7:lathithuyan1988!@github.com/GiangLh7/utils",
+    "hapi": "^17.3.1",
+    "hapi-auth-jwt": "^4.0.0",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.14",
+    "nconf": "^0.10.0",
+    "node-uuid": "^1.4.8"
+  },
+  "devDependencies": {
+    "debug": "^3.1.0"
+  }
+}
